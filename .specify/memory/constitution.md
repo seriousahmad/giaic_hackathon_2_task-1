@@ -1,55 +1,53 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT:
+Version change: N/A → 1.0.0 (initial version)
+List of modified principles:
+- Simplicity and In-Memory Operation (new)
+- Deterministic and Testable Behavior (new)
+- AI-First Design and Spec-Driven Development (new)
+- Clean Architecture and Modularity (new)
+- User-Respectful Console UX (new)
+- Extensible Foundation (new)
+Added sections: Technology Stack and Constraints, Development Workflow and Quality Standards, Governance
+Removed sections: None (completely new constitution)
+Templates requiring updates:
+- .specify/templates/plan-template.md ✅ updated (Constitution Check section will now reference new principles)
+- .specify/templates/spec-template.md ✅ updated (requirements should align with new principles)
+- .specify/templates/tasks-template.md ✅ updated (task categorization reflects new principles)
+Follow-up TODOs: RATIFICATION_DATE needs to be set when constitution is officially adopted
+-->
+
+# In-Memory Console Todo App Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Simplicity and In-Memory Operation
+All data exists only during runtime in memory collections; no external databases or file persistence; single-process, single-user execution.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Deterministic and Testable Behavior
+Same input must always produce the same output; clear, unambiguous specifications that are machine-readable; strict adherence to PEP 8 standards and type hints.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### AI-First Design and Spec-Driven Development
+Specifications must be unambiguous and machine-readable; designed for AI-assisted development workflows using Spec-Kit Plus and Claude Code; clear separation of concerns for extensibility.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Clean Architecture and Modularity
+Follow modular architecture with clear separation: Models (Task, enums), Services (task manager, scheduler), UI layer (console input/output); mandatory use of Python type hints and docstrings.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### User-Respectful Console UX
+Console interactions should feel intentional, not noisy; prompts must be concise and consistent; output formatting must prioritize readability; no raw stack traces shown to users.
 
-### [PRINCIPLE_6_NAME]
+### Extensible Foundation
+Clear foundation for future persistence or UI layers without refactoring core logic; designed to support all phases (MVP, Enhanced Productivity, Advanced Scheduling).
 
+## Technology Stack and Constraints
 
-[PRINCIPLE__DESCRIPTION]
+Runtime & Language: Python 3.12+; Package & Environment Management: UV; No file system storage, external databases, GUI or web interface. The application operates entirely in memory with console-based interaction, single-process and single-user execution, running in standard terminal environments.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow and Quality Standards
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Follow PEP 8 standards strictly; mandatory use of Python type hints and docstrings; graceful error handling with clear, human-readable messages; all core features implemented and functional in-memory. The codebase must support AI-assisted development workflows using Spec-Kit Plus and Claude Code, with clear specifications that are unambiguous and machine-readable.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Constitution supersedes all other practices; amendments require documentation and approval; all implementations must adhere to constraints and principles defined here; must run in standard terminal environment. The constitution provides the foundational rules that guide all development decisions for the In-Memory Console Todo App project.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Original adoption date unknown | **Last Amended**: 2025-12-28
